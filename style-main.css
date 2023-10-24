@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e3f2fd;
+    background-image: url(images/8bit2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper{
+    width: 65vmin; 
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    background: #2b4676;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.4);
+}
+
+.game-details{
+    color: #b8c6dc;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-board{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    /* background: #212837; */
+    background-color: whitesmoke;
+    grid-template: repeat(15, 1fr) / repeat(15, 1fr);
+}
+
+.play-board .food{
+    /* background: #ff003d; */
+    background-image: url(images/food.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.play-board .head{
+    /* background: #60cbff; */
+    background-color: whitesmoke;
+    background-image: url(images/cat.png);
+    background-size: cover;
+    background-position: center;
+}   
+
+.controls{
+    display: none;
+    justify-content: space-between;
+}
+
+.controls i{
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #b8c6dc;
+    width: calc(100% / 4);
+    cursor: pointer;
+    border-right: 1px solid #171b26;
+}
+
+
+
+
+/* Audio */
+.audio-button {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  button {
+    /* background-color: #3498db; */
+    background-color: rgb(86, 190, 255);
+    border: none;
+    border-radius: 5px;
+    margin-left: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    /* transition: background-color 0.5s; */
+  }
+  
+  /* button:hover {
+    background-color: #2980b9;
+  } */
+  
+  audio {
+    display: none;
+  }
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    /* body {
+        background-image: url(images/jiro\ horikoshi\ wallpaper.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    } */
+
+    .wrapper{
+        width: 90vmin;
+        height: 115vmin;
+    }
+
+    .game-details{
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+
+    .controls{
+        display: flex;
+        transition: all 0.5s;
+    }
+
+    .controls i{
+        padding: 20px 0;
+        font-size: 1.2rem;
+        transition: all 0.5s;
+    }
+
+    .controls i:hover {
+        color: #60cbff;
+    }
+
+    .play-board .food{
+        /* background: #ff003d; */
+        background-image: url(images/food.png);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .play-board .head{
+        /* background: #60cbff; */
+        background-color: whitesmoke;
+        background-image: url(images/cat.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
